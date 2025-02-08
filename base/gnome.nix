@@ -2,10 +2,9 @@
 {
 	environment.systemPackages = with pkgs; [
 		gnomeExtensions.pop-shell
-		gnomeExtensions.super-key
+		gnomeExtensions.tray-icons-reloaded
+		gnomeExtensions.no-overview
 		pop-launcher
-		#cosmic-launcher
-		#onagre
 	];
 	
 	environment.gnome.excludePackages = with pkgs; [

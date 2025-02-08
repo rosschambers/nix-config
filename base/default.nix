@@ -10,6 +10,12 @@
 			options = "--delete-older-than 7d";	
 		};
 	};
+
+	virtualisation.docker.rootless = {
+		enable = true;
+		setSocketVariable = true;	
+	};
+	
 	nixpkgs.config.allowUnfree = true;
 
 	imports = [

@@ -26,10 +26,4 @@
 		./security.nix
 		./services.nix
 	];
-	environment.systemPackages = with pkgs; [
-		micro
-		bat
-		wget
-		git
-	];
 }

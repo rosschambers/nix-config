@@ -10,6 +10,7 @@
 		vscode-fhs
 		devbox
 		plantuml
+#		lmstudio
 	];
 
 	programs = {

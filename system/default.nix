@@ -2,6 +2,11 @@
 	imports = [
 		./hardware-configuration.nix
 		./adguard.nix
+		./ddclient.nix
+		./home-assistant.nix
+		./samba.nix
+		./nextcloud.nix
+		./nginx.nix
 	];
 
 	networking.hostName = "ixiri-serve";

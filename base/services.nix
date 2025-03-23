@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 {
 	services = {
-
 		xserver = {
 			enable = true;
 			displayManager.gdm = {
@@ -10,7 +9,7 @@
 			};
 			desktopManager.gnome.enable = true;
 		};
-
+		
 		pipewire = {
 			enable = true;
 			alsa.enable = true;

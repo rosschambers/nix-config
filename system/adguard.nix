@@ -23,6 +23,8 @@
 			filters = map(url: {
 				enabled = true; url = url;
 			})[
+				"https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt"
+				"https://adguardteam.github.io/HostlistsRegistry/assets/filter_59.txt"
 				"https://adguardteam.github.io/HostlistsRegistry/assets/filter_9.txt"
 				"https://adguardteam.github.io/HostlistsRegistry/assets/filter_11.txt"
 			];

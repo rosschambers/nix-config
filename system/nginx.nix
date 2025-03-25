@@ -5,10 +5,24 @@
 	    	enable = true;
 	    	virtualHosts = {
 	    		"nextcloud.serve" = {
-	    			addSSL = true;
-	    			forceSSL = true;
-	    			enableAcme = true;	
+	    			locations."/" = {
+	    				return = "301 https://nextcloud.rosschambers.xyz";
+	    			};
 	    		};
+	    		"adguard.serve" = {
+	    			locations."/" = {
+	    				proxyPass = "http://127.0.0.1:3000";
+					};
+	    		};
+	    		"nextcloud.rosschambers.xyz" = {
+	    			addSSL = true;
+	    			enableACME = true;
+	    		};
+	    		_ = {
+					locations."/" = {
+						return = 404;
+					};
+				};
 	    	};
 		};
 	};
@@ -17,6 +31,8 @@
 	  acceptTerms = true;
 	  defaults.email = "acme@rosschambers.xyz";
 	};
+	
+	users.users.nginx.extraGroups = [ "acme" ];
 
 	networking.firewall.allowedTCPPorts = [
 		80

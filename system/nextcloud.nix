@@ -1,8 +1,5 @@
 { config, pkgs, ...}:
 {
-	
-	environment.etc."nextcloud-admin-pass".text = "WeAreTheChampions!";
-
 	services = {
 		nextcloud = {
 		    enable = true;
@@ -15,8 +12,7 @@
 			config = {
 				dbtype = "pgsql";
 				adminuser = "admin";
-#				adminpassFile = "/share/config/nextcloud-admin.conf";
-				adminpassFile = "/etc/nextcloud-admin-pass";
+				adminpassFile = "/share/config/nextcloud-admin.conf";
 			};
 			extraApps = {
 				inherit (config.services.nextcloud.package.packages.apps)  news contacts calendar deck end_to_end_encryption memories onlyoffice spreed tasks twofactor_webauthn; 	
